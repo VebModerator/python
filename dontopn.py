@@ -1,5 +1,5 @@
 """
-ООП - объектно ориентированное прораммирование
+ООП - объектно ориентированное программирование
 класс - общее описание предметной области на языке прогаммирования
 объект - экземпляр (конкретный представитель класса)
 метод - функция, свзяанная с объектом класса (классом)
@@ -52,10 +52,6 @@ class Car:
             print(f"{self.brand} {self.model} POWER ON!")
             self.is_power = True
 
-    def display(self):
-        if:
-
-        else:
 
     def power_on(self, new_color):
         if self.is_power:
@@ -65,9 +61,34 @@ class Car:
             self.is_power = False
 
 
+#Дочерний класс грузовых машин
+class Truck(Car):
+    #указывание характеристики родительского класса и новые характеристики дочернего
+    def __init__(self, brand, model, year, power, capcity, currence="RUB"):
+        #Вызываем конструктор родительского класса с его параметрами серез функцию super
+        super().__init__( brand, model, year, power, capcity, currence="RUB")
+        self.capcity = capcity
+        self.axles = axles
+
+    def tilt_trailer(self):
+        print(f"{self.brand} {self.model} title trailer")
+
+    def poerw_off(self):
+        super()._power_off()
+        print("The method of truck class")
 
 car_audi = Car(brand="Audi", model = "A6", year = "2022", power = "249")
 car_bmw = Car(brand="BMW", model = "X6", year = "2022", power = "249")
+
+truck = Truck(brand="Volvo", model="xaxaxa", year="2019", capcity="4000", axles="6", power="700")
+truck.power_on()
+truck.tilt_trailer()
+truck.power_off()
+
+
+
+
+
 
 
 car_audi.power_off()
@@ -85,3 +106,5 @@ car_audi._display_color()
 
 print(dir (car_audi))
 print(car_audi_Car_speed)
+
+print(id(a))
